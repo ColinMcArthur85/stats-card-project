@@ -2,7 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
 body {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: hsl(233deg, 47%, 7%);
@@ -13,11 +12,11 @@ body {
 }
 
 img {
-  max-width:100%;
-  display:block;
-  object-fit: cover;
   mix-blend-mode: multiply;
   opacity: 80%;
+  display: block;
+  object-fit: cover;
+  max-width: 100%;
 }
 
 .flex-col {
@@ -46,18 +45,22 @@ img {
 }
 
 .card {
+  display: flex;
+  flex-direction: column-reverse;
   background-color: hsl(244deg, 38%, 16%);
   color: hsla(0deg, 0%, 100%, 0.6);
-  max-width: 375px;
+  max-width: 70vw;
   margin-inline: auto;
   border-radius: 8px;
   overflow: hidden;
 }
 .card__image {
   width: 100%;
+  display: block;
+  object-fit: cover;
+  max-width: 100%;
 }
 .card__image-wrapper {
-  margin-bottom: 0.5rem;
   background: hsl(277deg, 64%, 61%);
 }
 .card__content {
@@ -81,17 +84,16 @@ img {
 
 @media (min-width: 1440px) {
   .card {
-    max-width: 1440px;
-    display: flex;
-    flex-direction: row-reverse;
+    max-width: 1240px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-flow: dense;
   }
   .card__image-wrapper {
     margin-bottom: 0px;
   }
   .card__content {
     text-align: left;
-    width: 50%;
-    padding: 5rem 16rem 3rem 5rem;
   }
   .card__content-heading {
     margin-bottom: 3rem;
@@ -106,9 +108,6 @@ img {
     flex-direction: row;
     justify-content: space-between;
     padding-right: 4rem;
-  }
-  .card__image-wrapper {
-    width: 50%;
   }
   .flex-col {
     margin-bottom: 0px !important;
