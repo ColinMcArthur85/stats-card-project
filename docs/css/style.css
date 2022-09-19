@@ -12,6 +12,14 @@ body {
   color: hsl(0deg, 0%, 100%);
 }
 
+img {
+  max-width:100%;
+  display:block;
+  object-fit: cover;
+  mix-blend-mode: multiply;
+  opacity: 80%;
+}
+
 .flex-col {
   display: flex;
   flex-direction: column;
@@ -47,7 +55,6 @@ body {
 }
 .card__image {
   width: 100%;
-  opacity: 0.4;
 }
 .card__image-wrapper {
   margin-bottom: 0.5rem;
